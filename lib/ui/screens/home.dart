@@ -81,57 +81,53 @@ class HomeScreen extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Column(
-                      children: <Widget>[
-                        Container(
-                          margin: const EdgeInsets.symmetric(
-                              vertical: 9.0, horizontal: 15.0),
-                          padding: EdgeInsets.all(11.0),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15.0),
-                            color: Colors.white,
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black26,
-                                blurRadius: 1.0,
-                                offset: Offset(0, 1),
-                              ),
-                            ],
+                    Container(
+                      margin: const EdgeInsets.symmetric(
+                          vertical: 9.0, horizontal: 15.0),
+                      padding: EdgeInsets.all(11.0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15.0),
+                        color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black26,
+                            blurRadius: 1.0,
+                            offset: Offset(0, 1),
                           ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        ],
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: <Widget>[
+                          Column(
                             children: <Widget>[
-                              Column(
-                                children: <Widget>[
-                                  Text(
-                                    "435",
-                                    style: Theme.of(context).textTheme.title,
-                                  ),
-                                  Text("Fans"),
-                                ],
+                              Text(
+                                "435",
+                                style: Theme.of(context).textTheme.title,
                               ),
-                              Column(
-                                children: <Widget>[
-                                  Text(
-                                    "1395",
-                                    style: Theme.of(context).textTheme.title,
-                                  ),
-                                  Text("Followers"),
-                                ],
-                              ),
-                              Column(
-                                children: <Widget>[
-                                  Text(
-                                    "51",
-                                    style: Theme.of(context).textTheme.title,
-                                  ),
-                                  Text("Reviews"),
-                                ],
-                              ),
+                              Text("Fans"),
                             ],
                           ),
-                        )
-                      ],
+                          Column(
+                            children: <Widget>[
+                              Text(
+                                "1395",
+                                style: Theme.of(context).textTheme.title,
+                              ),
+                              Text("Followers"),
+                            ],
+                          ),
+                          Column(
+                            children: <Widget>[
+                              Text(
+                                "51",
+                                style: Theme.of(context).textTheme.title,
+                              ),
+                              Text("Reviews"),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
