@@ -18,7 +18,7 @@ class CatalogueScreen extends StatelessWidget {
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
               Container(
-                height: 55,
+                height: 60,
                 padding: EdgeInsets.symmetric(vertical: 15.0),
                 alignment: Alignment.center,
                 child: TrustyHorizontalMenu(

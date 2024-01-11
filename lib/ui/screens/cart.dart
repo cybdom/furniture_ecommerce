@@ -106,7 +106,6 @@ class CartScreen extends StatelessWidget {
                                 Flexible(
                                   child: Container(
                                     alignment: Alignment.bottomRight,
-                                    height: double.infinity,
                                     child: QuantityIndicator(),
                                   ),
                                 )

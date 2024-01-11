@@ -13,13 +13,15 @@ class _QuantityIndicatorState extends State<QuantityIndicator> {
       padding: const EdgeInsets.all(11.0),
       child: Row(
         children: <Widget>[
-          GestureDetector(
-            child: Icon(Icons.add),
-            onTap: () {
-              setState(() {
-                _quantity += 1;
-              });
-            },
+          Expanded(
+            child: GestureDetector(
+              child: Icon(Icons.add),
+              onTap: () {
+                setState(() {
+                  _quantity += 1;
+                });
+              },
+            ),
           ),
           SizedBox(
             width: 5.0,
@@ -28,13 +30,15 @@ class _QuantityIndicatorState extends State<QuantityIndicator> {
           SizedBox(
             width: 5.0,
           ),
-          GestureDetector(
-            child: Icon(Icons.remove),
-            onTap: () {
-              setState(() {
-                _quantity -= 1;
-              });
-            },
+          Expanded(
+            child: GestureDetector(
+              child: Icon(Icons.remove),
+              onTap: () {
+                setState(() {
+                  _quantity -= 1;
+                });
+              },
+            ),
           ),
         ],
       ),

@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Column(
+      body: ListView(
         children: <Widget>[
           Container(
             color: Colors.cyan,
@@ -135,67 +135,67 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           MyCustomMenu(),
-          Expanded(
-            child: GridView.builder(
-              padding: EdgeInsets.symmetric(horizontal: 15.0),
-              itemCount: 5,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 15.0,
-                  mainAxisSpacing: 15.0,
-                  childAspectRatio: 2 / 3),
-              itemBuilder: (ctx, i) {
-                return Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(9.0),
-                    boxShadow: [
-                      BoxShadow(
-                          color: Colors.grey.shade300,
-                          offset: Offset(0, 3),
-                          blurRadius: 3.0),
-                    ],
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Expanded(
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(9.0),
-                              topRight: Radius.circular(9.0),
-                            ),
-                            color: Color(0xffe5e6ea),
+          GridView.builder(
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+            padding: EdgeInsets.symmetric(horizontal: 15.0),
+            itemCount: 5,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                crossAxisSpacing: 15.0,
+                mainAxisSpacing: 15.0,
+                childAspectRatio: 2 / 3),
+            itemBuilder: (ctx, i) {
+              return Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(9.0),
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.grey.shade300,
+                        offset: Offset(0, 3),
+                        blurRadius: 3.0),
+                  ],
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Expanded(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(9.0),
+                            topRight: Radius.circular(9.0),
                           ),
-                          child: Image.network(
-                              "https://cdn.pixabay.com/photo/2017/03/19/09/02/sofa-2155865_1280.jpg"),
+                          color: Color(0xffe5e6ea),
                         ),
+                        child: Image.network(
+                            "https://cdn.pixabay.com/photo/2017/03/19/09/02/sofa-2155865_1280.jpg"),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(9.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              "Wome Sofa",
-                              style: Theme.of(context).textTheme.titleLarge,
-                            ),
-                            Text(
-                              "Free mind and body",
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .titleMedium
-                                  ?.apply(color: Colors.grey[500]),
-                            )
-                          ],
-                        ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(9.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            "Wome Sofa",
+                            style: Theme.of(context).textTheme.titleLarge,
+                          ),
+                          Text(
+                            "Free mind and body",
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleMedium
+                                ?.apply(color: Colors.grey[500]),
+                          )
+                        ],
                       ),
-                    ],
-                  ),
-                );
-              },
-            ),
+                    ),
+                  ],
+                ),
+              );
+            },
           ),
         ],
       ),
