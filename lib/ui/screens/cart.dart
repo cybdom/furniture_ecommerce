@@ -41,7 +41,7 @@ class CartScreen extends StatelessWidget {
                               borderRadius: BorderRadius.circular(15.0),
                               boxShadow: [
                                 BoxShadow(
-                                  color: Colors.grey[200],
+                                  color: Colors.grey.shade200,
                                   blurRadius: 3.0,
                                   offset: Offset(0, 1),
                                 ),
@@ -52,7 +52,7 @@ class CartScreen extends StatelessWidget {
                                 Flexible(
                                   flex: 1,
                                   child: Image.network(
-                                      "https://ak0.scstatic.net/1/bigimg-cdn1-cont12.sweetcouch.com/149725972559962841-modern-loveseat-sofa-tufted-back-tapered.png"),
+                                      "https://cdn.pixabay.com/photo/2017/03/19/09/02/sofa-2155865_1280.jpg"),
                                 ),
                                 Flexible(
                                   flex: 2,
@@ -67,8 +67,9 @@ class CartScreen extends StatelessWidget {
                                       children: <Widget>[
                                         Text(
                                           "Gummy Sofa",
-                                          style:
-                                              Theme.of(context).textTheme.title,
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .titleLarge,
                                         ),
                                         Row(
                                           children: <Widget>[
@@ -87,7 +88,7 @@ class CartScreen extends StatelessWidget {
                                               "Green",
                                               style: Theme.of(context)
                                                   .textTheme
-                                                  .overline,
+                                                  .labelSmall,
                                             )
                                           ],
                                         ),
@@ -95,8 +96,8 @@ class CartScreen extends StatelessWidget {
                                           "\$ 299",
                                           style: Theme.of(context)
                                               .textTheme
-                                              .title
-                                              .apply(fontWeightDelta: 2),
+                                              .titleLarge
+                                              ?.apply(fontWeightDelta: 2),
                                         )
                                       ],
                                     ),
@@ -152,12 +153,14 @@ class CartScreen extends StatelessWidget {
             ),
             FractionallySizedBox(
               widthFactor: 2 / 3,
-              child: RaisedButton(
+              child: ElevatedButton(
                 child: Text(
                   "Confirm Payment",
                   style: TextStyle(color: Colors.white),
                 ),
-                color: Colors.cyan,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.cyan,
+                ),
                 onPressed: () {},
               ),
             ),

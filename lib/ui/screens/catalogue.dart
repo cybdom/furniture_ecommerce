@@ -46,7 +46,7 @@ class CatalogueScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(9.0),
                         boxShadow: [
                           BoxShadow(
-                              color: Colors.grey[300],
+                              color: Colors.grey.shade300,
                               offset: Offset(0, 3),
                               blurRadius: 3.0),
                         ],
@@ -64,7 +64,7 @@ class CatalogueScreen extends StatelessWidget {
                                 color: Color(0xffe5e6ea),
                               ),
                               child: Image.network(
-                                  "https://ak0.scstatic.net/1/bigimg-cdn1-cont12.sweetcouch.com/149725972559962841-modern-loveseat-sofa-tufted-back-tapered.png"),
+                                  "https://cdn.pixabay.com/photo/2017/03/19/09/02/sofa-2155865_1280.jpg"),
                             ),
                           ),
                           Padding(
@@ -74,14 +74,14 @@ class CatalogueScreen extends StatelessWidget {
                               children: <Widget>[
                                 Text(
                                   "Wome Sofa",
-                                  style: Theme.of(context).textTheme.title,
+                                  style: Theme.of(context).textTheme.titleLarge,
                                 ),
                                 Text(
                                   "Free mind and body",
                                   style: Theme.of(context)
                                       .textTheme
-                                      .subhead
-                                      .apply(color: Colors.grey[500]),
+                                      .titleMedium
+                                      ?.apply(color: Colors.grey[500]),
                                 ),
                                 SizedBox(
                                   height: 5.0,
@@ -94,8 +94,8 @@ class CatalogueScreen extends StatelessWidget {
                                       "\$299",
                                       style: Theme.of(context)
                                           .textTheme
-                                          .title
-                                          .apply(fontWeightDelta: 2),
+                                          .titleLarge
+                                          ?.apply(fontWeightDelta: 2),
                                     ),
                                     InkWell(
                                       onTap: () {
@@ -115,7 +115,7 @@ class CatalogueScreen extends StatelessWidget {
                                           shape: BoxShape.circle,
                                           boxShadow: [
                                             BoxShadow(
-                                              color: Colors.grey[400],
+                                              color: Colors.grey.shade400,
                                               blurRadius: 5.0,
                                               offset: Offset(0, 3),
                                             ),

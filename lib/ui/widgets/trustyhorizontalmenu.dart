@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class TrustyHorizontalMenu extends StatefulWidget {
   final List<dynamic> list;
 
-  const TrustyHorizontalMenu({Key key, @required this.list}) : super(key: key);
+  const TrustyHorizontalMenu({super.key, required this.list});
   @override
   _TrustyHorizontalMenuState createState() => _TrustyHorizontalMenuState();
 }
@@ -36,14 +36,15 @@ class _TrustyHorizontalMenuState extends State<TrustyHorizontalMenu> {
                     fontSize: 17,
                   ),
                 ),
-                active == id ? Container(
-                  width: 15,
-                  height: 3,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5.0),
-                    color: Colors.cyan
-                  ),
-                ) : Container(),
+                active == id
+                    ? Container(
+                        width: 15,
+                        height: 3,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5.0),
+                            color: Colors.cyan),
+                      )
+                    : Container(),
               ],
             ),
           ),

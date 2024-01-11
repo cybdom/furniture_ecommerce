@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:furniture_ecommerce/global.dart';
 
 class MyCustomMenu extends StatefulWidget {
-  const MyCustomMenu({
-    Key key,
-  }) : super(key: key);
-
   @override
   _MyCustomMenuState createState() => _MyCustomMenuState();
 }
